@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="@drawable/bg_sub"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/detail_head"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageView1"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textStation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:text="火车站 "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#18415f" />
+        <LinearLayout 
+             android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+                android:text="有"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#18415f" />
+           
+             <TextView
+                android:id="@+id/textSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#d34800" />
+           
+             <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+                android:text="条线路经过这里"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#18415f" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/linearLayout1"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/icon_location" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/detail_head"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/listView_InLinerInStation"
+            android:layout_width="fill_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:layout_height="wrap_content" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

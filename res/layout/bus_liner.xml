@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_sub" >
+
+    <RelativeLayout
+        android:id="@+id/detail_head"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp" >
+
+        <ImageButton
+            android:id="@+id/ibtOrientation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:src="@drawable/select_orientation" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="19dp"
+            android:src="@drawable/ic_bus" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textEarlyTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首班：5:20"
+                android:textColor="#6f6f6f"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textLateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="末班：21:30"
+                android:textColor="#6f6f6f"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textUpDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView1"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="上行"
+            android:textColor="#18415f"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textLinerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:text="xx"
+            android:textColor="#18415f"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/detail_tail"
+        android:layout_below="@+id/detail_head"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/listView_InBusLiner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent" >
+        </ListView>
+    </LinearLayout>
+
+   
+
+        <LinearLayout
+            android:id="@+id/detail_tail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/llExit"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/showNextBusError"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvNearMsgError"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textColor="#18415f"
+                    android:textSize="20dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/showNextBus"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="距离"
+                        android:textColor="#18415f"
+                        android:textSize="20dip" />
+
+                    <TextView
+                        android:id="@+id/tvNearMsgStationName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="xx"
+                        android:textColor="#fc0808"
+                        android:textSize="20dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最近的"
+                        android:textColor="#18415f"
+                        android:textSize="20dip" />
+
+                    <TextView
+                        android:id="@+id/tvNearMsgLinerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="xxx"
+                        android:textColor="#fc0808"
+                        android:textSize="20dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="目前所在站点为"
+                        android:textColor="#18415f"
+                        android:textSize="20dip" />
+
+                    <TextView
+                        android:id="@+id/tvNearMsgNearStationName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textColor="#0415fb"
+                        android:textSize="20dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                     android:id="@+id/has_n_station"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="距离您选择的站点还有"
+                        android:textColor="#18415f"
+                        android:textSize="20dip" />
+
+                    <TextView
+                        android:id="@+id/tvNearMsgLength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textColor="#fc0808"
+                        android:textSize="20dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="站"
+                        android:textColor="#18415f"
+                        android:textSize="20dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                      android:id="@+id/arrive_station"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tvarrive_station"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                      
+                        android:text="车辆已到站"
+                        android:textColor="#18415f"
+                        android:textSize="20dip" />
+                </LinearLayout>
+                <LinearLayout
+                      android:id="@+id/start_station"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tvarrive_station"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                      
+                        android:text="你选择的站点为始发站"
+                        android:textColor="#18415f"
+                        android:textSize="20dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:id="@+id/llExit"
+            android:layout_height="wrap_content" >
+
+             <ImageButton
+            android:id="@+id/ibtnRerutn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/select_return" />
+
+        <ImageButton
+            android:id="@+id/ibtnExit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/select_eixt" />
+
+        </LinearLayout>
+
+</RelativeLayout>

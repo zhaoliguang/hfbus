@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/llMapLayout"
+    android:background="@drawable/map_background"
+    
+    android:orientation="vertical" >
+    
+    
+<LinearLayout android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+                    
+                     >
+				<com.keli.hfbus.view.PopMapView
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				   
+					android:id="@+id/popMapView" 
+					android:clickable="true" android:padding="4dp"/>
+				
+</LinearLayout>
+
+</LinearLayout>

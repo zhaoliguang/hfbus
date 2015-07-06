@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:paddingLeft="20dp"
+    android:paddingRight="20dp" 
+    android:focusable="true"  
+     android:focusableInTouchMode="true"
+      android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/set_order_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合肥" />
+
+        <EditText
+            android:id="@+id/edStart"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="0dp"
+            android:singleLine="true"
+            android:hint="起点:"
+            android:ems="10" >
+        </EditText>
+        <ListView
+            android:id="@+id/startList"
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:paddingTop="0dp"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000" 
+            android:divider="#00000000"
+            >
+        </ListView>
+
+        <EditText
+            android:id="@+id/edEnd"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="0dp"
+              android:singleLine="true"
+            android:hint="终点:"
+            android:ems="10" />
+
+        <ListView
+            android:id="@+id/endList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="0dp"
+            android:paddingTop="0dp" 
+            android:cacheColorHint="#00000000" 
+            android:divider="#00000000">
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rgChange"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/rdFast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:button="@drawable/select_radio_button"
+                android:background="@android:color/transparent"
+                style="@style/set_order_style"
+                android:layout_marginRight="20dp"
+                android:text="    较快捷" />
+
+            <RadioButton
+                android:id="@+id/rdLessChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 style="@style/set_order_style"
+                 android:background="@android:color/transparent"
+                 android:button="@drawable/select_radio_button"
+                  android:layout_marginRight="20dp"
+                android:text="    少换乘" />
+
+            <RadioButton
+                android:id="@+id/rdLessFoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/select_radio_button"
+                android:background="@android:color/transparent"
+                 style="@style/set_order_style"
+                android:text="    少步行" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/ibtnQueryLinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/select_query_big" />
+
+    </LinearLayout>
+
+</LinearLayout>

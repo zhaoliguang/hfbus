@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="translucent_background">#ffffffff</color>
+    <color name="transparent_background">#50000000</color>
+    <color name="movie_screen_color">#fffffafa</color>
+    <color name="seat_border_color">#ffbbffff</color>
+    <color name="checked_seat_color">#ffffff00</color>
+    <color name="default_seat_color">#ff919191</color>
+    <color name="sold_seat_color">#ffee0000</color>
+    <color name="tab_text_selected">#ffffffff</color>
+    <color name="tab_text_unselected">#ffffff00</color>
+    <color name="unselected_tab_text_color">#ff434343</color>
+    <color name="yellow_color">#fffffc00</color>
+    <color name="gray_color">#ff8a7363</color>
+    <color name="brown">#ff5d4624</color>
+    <color name="orange_color">#ffe75208</color>
+    <color name="black_color">#ff000000</color>
+    <color name="white_color">#ffffffff</color>
+    <color name="transport_color">#00ffffff</color>
+    <color name="gray">#ff3f3e3e</color>
+    <color name="white">#ffffffff</color>
+    <color name="green">#ff33ff00</color>
+    <color name="black">#ff000000</color>
+    <color name="alert_black">#aa000000</color>
+    <color name="alert_gray">#ff7f7f7f</color>
+    <color name="tou">#00000000</color>
+    <color name="progress_start">#ff00e4ff</color>
+    <color name="progress_end">#ff1da8eb</color>
+    <color name="dialog_bg">#ffdadada</color>
+    <color name="dialog_bg_gold">#ccd6c38b</color>
+    <color name="dialog_bg_blue">#ccf1f1f1</color>
+    <color name="layout_frame">#ffcfcfcf</color>
+    <color name="search_normal">#ff28496c</color>
+    <color name="search_pressed">#ff1497ad</color>
+    <color name="search_focused">#ffE18859</color>
+    
+    <item type="color" name="dialog_content">@color/black</item>
+    
+</resources>

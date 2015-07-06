@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="HandlerLeak">
+        <ignore path="src\com\keli\hfbus\ui\BusLinearActivity.java" />
+    </issue>
+    <issue id="NewApi" severity="ignore">
+        <ignore path="src\com\keli\hfus\alarm\AlarmReceiver.java" />
+        <ignore path="src\com\keli\hfus\alarm\Alarms.java" />
+    </issue>
+    <issue id="ParserError" severity="ignore">
+        <ignore path="src\com\keli\hfbus\ui\OutPrompt.java" />
+    </issue>
+</lint>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_sub"
+    android:orientation="vertical" >
+
+   <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <EditText
+                android:id="@+id/editStation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="请输入站点名称" >
+            </EditText>
+	
+            <ListView
+                android:id="@+id/stationList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+	            android:layout_marginTop="0dp"
+	            android:cacheColorHint="#00000000" 
+	            android:divider="#00000000">
+            </ListView>
+            
+              <ImageButton
+            android:id="@+id/ibtnStationQuery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:src="@drawable/select_station_query_ibtn" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+       >
+		 <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+           android:layout_marginLeft="18dp"
+           android:textSize="18sp"
+            android:text="搜索站点的历史记录"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#18415f" />
+        <ListView
+            android:id="@+id/listView_InStationQuery"
+            android:layout_width="fill_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+    </LinearLayout>
+
+</LinearLayout>

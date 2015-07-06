@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.keli.hfbus"
+    android:versionCode="1"
+    android:versionName="1.01" >
+
+    <uses-sdk android:minSdkVersion="8" />
+    
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <application
+        android:name=".HFBusApp"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+         android:label="合肥公交"
+        android:theme="@style/CustomWindowTitleBar" >
+        <activity
+            android:name="WelcomActivity"
+             android:label="合肥公交"
+             android:theme="@style/MyTheme.NoTitleBar.CustomBackground"
+             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HFBusMain" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.LinerQueryAcitvity"
+            android:windowSoftInputMode="adjustPan" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.BusLinearActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.StationQueryActivity"
+             android:windowSoftInputMode="adjustPan" 
+             android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.LinerInStationActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.PopMapActivity" 
+            	android:theme="@style/popWindowgStyle"
+            	android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.OutPrompt"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.OutPromptDetail"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.OrderPromptActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.DateSetActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.ChangeBusActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+         <activity android:name=".ui.ChangeBusItem" 
+             android:screenOrientation="portrait">
+         </activity>
+         <activity android:name=".ui.ManageOrderActivity" 
+             android:screenOrientation="portrait">
+         </activity>
+         <activity android:name=".ui.AlarmAgainSetting" 
+             android:screenOrientation="portrait">
+         </activity>
+          <activity android:name=".ui.LoginActivity" 
+              android:theme="@android:style/Theme.NoTitleBar"
+              android:screenOrientation="portrait">
+          </activity>
+          <activity android:name=".ui.RegisterActivity" 
+              android:theme="@android:style/Theme.NoTitleBar"></activity>
+          <activity android:name=".ui.SetOrderActivity" 
+              android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+              android:screenOrientation="portrait" />
+         
+          <provider android:name="com.keli.hfbus.alarm.AlarmProvider"
+           		android:authorities="com.keli.hfbus">
+           </provider>
+          <activity android:name=".alarm.DeskClockMainActivity" 
+              android:screenOrientation="portrait">
+          </activity>
+          <activity android:name=".alarm.SettingsActivity"
+                android:label="@string/settings"
+                android:taskAffinity=""
+                android:excludeFromRecents="true"
+                android:screenOrientation="portrait"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+          
+       <activity android:name=".alarm.AlarmAlertFullScreen"
+           android:excludeFromRecents="true"
+           android:theme="@android:style/Theme.Wallpaper.NoTitleBar"
+           android:launchMode="singleInstance"
+           android:taskAffinity=""
+           android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+           android:screenOrientation="portrait"/>
+       <receiver android:name=".alarm.AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.cn.daming.deskclock.ALARM_ALERT" />
+                <action android:name="my_alarm_killed" />
+                <action android:name="my_cancel_snooze" />
+            </intent-filter>
+        </receiver>
+          
+       <activity android:name=".alarm.AlarmAlert"
+            android:excludeFromRecents="true"
+            android:theme="@style/alarm_alert"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+            android:screenOrientation="portrait"/>
+      
+       <activity android:name=".alarm.HandleSetAlarm"
+                android:theme="@android:style/Theme.NoDisplay"
+                android:excludeFromRecents="true"
+                android:permission="com.android.alarm.permission.SET_ALARM"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_ALARM" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+          <!-- This service receives the same intent as AlarmReceiver but it does
+             not respond to the same broadcast. The AlarmReceiver will receive
+             the alert broadcast and will start this service with the same
+             intent. The service plays the alarm alert and vibrates the device.
+             This allows the alert to continue playing even if another activity
+             causes the AlarmAlert activity to pause. -->
+          <service android:name=".alarm.AlarmKlaxon"
+                android:description="@string/alarm_klaxon_service_desc"
+                >
+            <intent-filter>
+                <action android:name="com.cn.daming.deskclock.ALARM_ALERT" />
+            </intent-filter>
+        </service>
+        
+          <receiver android:name=".alarm.AlarmInitReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

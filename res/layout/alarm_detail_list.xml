@@ -1,0 +1,117 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@drawable/bg_list_item"
+   >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/set_order_style"
+                 android:textSize="18sp"
+                  android:textColor="#d34800"
+                android:text="线路：" />
+
+            <TextView
+                android:id="@+id/tvXianLu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/set_order_style"
+                 android:textSize="16sp"
+                android:text="226路" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/set_order_style"
+                 android:textSize="18sp"
+                  android:textColor="#d34800"
+                android:text="方向：" />
+
+            <TextView
+                android:id="@+id/tvStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/set_order_style"
+                 android:textSize="16sp"
+                android:text="大学城" />
+
+            <TextView
+                android:id="@+id/tvDao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/set_order_style"
+                 android:textSize="16sp"
+                android:text="到" />
+
+            <TextView
+                android:id="@+id/tvEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/set_order_style"
+                 android:textSize="16sp"
+                android:text="桂花园" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/set_order_style"
+                 android:textSize="18sp"
+                  android:textColor="#d34800"
+                android:text="提醒站：" />
+
+            <TextView
+                android:id="@+id/tvArriveStation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/set_order_style"
+                 android:textSize="16sp"
+                android:text="黄科路口" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/set_order_style"
+                 android:textSize="16sp"
+                android:text="5" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/set_order_style"
+                 android:textSize="16sp"
+                android:text="站提醒" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
